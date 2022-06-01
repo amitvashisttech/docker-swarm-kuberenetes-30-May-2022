@@ -60,6 +60,35 @@
   213  history > README.md
 ```
 
+## Sample Example for Network NameSpaces
+```
+
+			   
+			  ISP / Router  ----->  s/w   --->  PC 
+			  
+			                        bridge  
+                                            network NameSpace 									
+                  							veth     --->      Container eth0 
+			   
+			   
+			   
+			   
+			       hostmachine                                                       container
+cont1 			    veth103  ---------------->  networkNameSpace   0  ----------------->  eth0 / veth104
+cont2 			    veth105  ---------------->  networkNameSpace   1  ----------------->  eth0 / veth106
+cont3 			    veth107  ---------------->  networkNameSpace   2  ----------------->  eth0 / veth108
+
+
+ip netns 
+
+docker exec -it cont1 ifconfig 
+
+ip netns exec networkNameSpace0 ifconfig
+```
+
+
+
+
 
 ```
  221  ip netns
