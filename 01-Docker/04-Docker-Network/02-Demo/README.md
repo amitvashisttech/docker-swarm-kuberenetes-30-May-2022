@@ -59,3 +59,38 @@
   212  ls
   213  history > README.md
 ```
+
+
+```
+ 221  ip netns
+ 141  ln -s /var/run/docker/netns /var/run/
+ 221  ip netns
+  222  ip netns 027e8d0754eb ifconfig
+  223  ip netns exec 027e8d0754eb ifconfig
+  224  ip add
+  225  ip addr
+  226  docker kill $(docker ps -qa)
+  227  docker ps
+  228  ip addr
+  229  docker run -itd --name test-network-1  ubuntu-nettools:16.04
+  230  docker run -itd --name test1-network-1  ubuntu-nettools:16.04
+  231  docker ps
+  232  ip addr
+  233  docker run -itd --name test1-network-2  ubuntu-nettools:16.04
+  234  ip addr
+  235  docker exec -it test1-network-1  ifconfig
+  236  ip addr
+  237  ls  /var/run/docker/netns/
+  238  ls  /var/run/netns
+  239  ls  -ld /var/run/netns
+  240  ip netns
+  241  ip netns exec 81cbe23a08d3 ifconfig
+  242  ip netns exec 18c3306819c1 ifconfig
+  243  ip addr
+  244  docker run -itd --name test1-network-3 --network mybr0  ubuntu-nettools:16.04
+  245  docker run -itd --name test1-network-4 --network mynet  ubuntu-nettools:16.04
+  246  ip addr
+  247  ip netns
+  248  ip netns exec eaccdcf53378 ifconfig
+  249  ip netns exec ff57f27bc6b0 ifconfig
+```
