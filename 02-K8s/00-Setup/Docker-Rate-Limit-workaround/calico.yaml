@@ -4588,6 +4588,8 @@ spec:
           effect: NoSchedule
       serviceAccountName: calico-kube-controllers
       priorityClassName: system-cluster-critical
+      imagePullSecrets:
+      - name: regcred
       containers:
         - name: calico-kube-controllers
           image: docker.io/calico/kube-controllers:v3.23.1
