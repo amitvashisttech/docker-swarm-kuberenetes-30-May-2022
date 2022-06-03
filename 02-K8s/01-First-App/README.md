@@ -12,6 +12,7 @@ kubectl get secrets
 
 # Apply the Nginx POD Config: 
 ```
+kubectl  run hello-k8s --image=nginx --port=80  --dry-run -o yaml >  nginx.yaml
 kubectl apply -f nginx.yaml
 ```
 
