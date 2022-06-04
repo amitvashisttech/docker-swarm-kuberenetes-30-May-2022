@@ -35,8 +35,8 @@ showmount -e localhost
 ## Install NFS Clinet Utils 
 ```
 apt-get install nfs-common -y
-mount -t nfs 172.31.0.10:/myexports /mnt/
+mount -t nfs 172.31.0.100:/myexports /mnt/
 cd /mnt/
 hostname >> hostname.txt
 ```
-a
+
