@@ -39,3 +39,4 @@ mount -t nfs 172.31.0.10:/myexports /mnt/
 cd /mnt/
 hostname >> hostname.txt
 ```
+a
